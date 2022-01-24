@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.bzt.helpdesk.domain.Chamado;
 
-public interface ChamandoRepository extends CrudRepository<Chamado, Long>{
+public interface ChamadoRepository extends CrudRepository<Chamado, Long>{
 
 }

@@ -6,6 +6,8 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
+import com.bzt.helpdesk.domain.enums.Perfil;
+
 @Entity
 public class Tecnico extends Pessoa{
 	private static final long serialVersionUID = 1L;
@@ -15,12 +17,12 @@ public class Tecnico extends Pessoa{
 
 	public Tecnico() {
 		super();
-		//addPerfil(Perfil.TECNICO);
+		addPerfil(Perfil.TECNICO);
 	}
 
 	public Tecnico(Long id, String nome, String cpf, String email, String senha) {
 		super(id, nome, cpf, email, senha);
-		//addPerfil(Perfil.TECNICO);
+		addPerfil(Perfil.TECNICO);
 	}
 
 	public List<Chamado> getChamados() {
@@ -29,6 +31,11 @@ public class Tecnico extends Pessoa{
 
 	public void setChamados(List<Chamado> chamados) {
 		this.chamados = chamados;
+	}
+
+	public void addPerfil(Perfil admin) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
