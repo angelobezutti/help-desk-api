@@ -13,14 +13,14 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import com.bzt.helpdesk.domain.enums.Perfil;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
-@Data @NoArgsConstructor
+@Data 
 public abstract class Pessoa implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
@@ -48,6 +48,16 @@ public abstract class Pessoa implements Serializable{
 		this.cpf = cpf;
 		this.email = email;
 		this.senha = senha;
+		addPerfil(Perfil.CLIENTE);
+	}
+	
+	public void addPerfil(Perfil perfil) {
+		this.perfis.add(perfil.getCodigo());
+	}
+	
+	public Pessoa() {
+		super();
+		addPerfil(Perfil.CLIENTE);
 	}
 	
 }
