@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 import com.bzt.helpdesk.domain.Tecnico;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.bzt.helpdesk.domain.enums.Perfil;
+import com.bzt.helpdesk.domain.enums.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
