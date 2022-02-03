@@ -10,17 +10,16 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.br.CPF;
 
-import com.bzt.helpdesk.domain.Tecnico;
+import com.bzt.helpdesk.domain.Cliente;
 import com.bzt.helpdesk.domain.enums.Perfil;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data @NoArgsConstructor
-public class TecnicoDTO implements Serializable{
+public class ClienteDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	protected Long id;
@@ -38,7 +37,7 @@ public class TecnicoDTO implements Serializable{
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	protected LocalDate dataCriação = LocalDate.now();
 
-	public TecnicoDTO(Tecnico obj) {
+	public ClienteDTO(Cliente obj) {
 		super();
 		this.id = obj.getId();
 		this.nome = obj.getNome();
